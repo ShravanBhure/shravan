@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Link Up Chat App</title>
+
+  <!-- Socket.IO client -->
+  <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+
+  <!-- Your JavaScript logic -->
+  <script defer src="js/client.js"></script>
+
+  <!-- Your stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <img class="chat-logo" src="chat.png" alt="Chat Logo" />
+  </nav>
+
+  <!-- Message container -->
+  <div class="chat-container container">
+    <!-- Messages will be appended here by JavaScript -->
+  </div>
+
+  <!-- Message input field and send button -->
+  <div class="send">
+    <form id="send-container">
+      <input type="text" id="messageInp" placeholder="Type a message..." autocomplete="off" required />
+      <button id="startBtn">Start Chat</button>
+    </form> 
+  </div>
+
+</body>
+</html>

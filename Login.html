@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Chat App</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" required><br><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" required><br><br>
+
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="Register.html">Register here</a></p>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Stop the page from reloading
+
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      // Basic validation: make sure both fields are filled
+      if (username && password) {
+        localStorage.setItem("currentUser", username); // Save any username
+        window.location.href = "Chat.html"; // Go to chat page
+      } else {
+        alert("Please enter a username and password");
+      }
+    });
+  </script>
+</body>
+</html>

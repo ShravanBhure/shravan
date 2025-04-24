@@ -1,0 +1,215 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .chat-logo{
+    display:block;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('../') no-repeat center center fixed;
+    background-color: #f4f6f8;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .register-container{
+    background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  }
+  .register-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .register-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .register-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .register-container button:hover {
+    background-color: #45a049;
+  }
+  
+  .register-container p {
+    margin-top: 15px;
+    color: #666;
+  }
+  
+  .register-container a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .register-container a:hover {
+    text-decoration: underline}
+
+    .login-container {
+      background-color: #fff;
+      padding: 30px 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+    
+    .login-container h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    .login-container label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      color: #555;
+      font-weight: bold;
+    }
+    
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .login-container button:hover {
+      background-color: #0056b3;
+    }
+    
+    .login-container p {
+      margin-top: 15px;
+      color: #666;
+    }
+    
+    .login-container a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    
+    .login-container a:hover {
+      text-decoration: underline;
+    }
+    
+
+    html, body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .chat-container.container {
+    background-color: #ffffff;
+    padding: 300px 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    max-width: 90%;
+    overflow-y: auto;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  #send-container {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    margin: auto;
+  }
+  
+  #startBtn {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  #startBtn:hover {
+    background-color: #0056b3;
+  }
+  
+  p {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Chat page styles */
+  #chatBox {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    height: 200px;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-y: auto;
+    text-align: left;
+  }
+  .message.left{
+    float: left;
+    clear:both;
+  }
+  .message.right{
+    float:right;
+    clear:both;
+  }
