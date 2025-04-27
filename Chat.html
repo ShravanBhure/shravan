@@ -5,11 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Link Up Chat App</title>
 
+  <script>
+    const currentUser = localStorage.getItem("currentUser");
+    if (!currentUser) {
+      window.location.href = "Login.html"; // ✅ redirect if not logged in
+    }
+  </script>
+
   <!-- Socket.IO client -->
   <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
 
   <!-- Your JavaScript logic -->
-  <script defer src="js/client.js"></script>
+  <script  defer src="js/client.js"></script>
 
   <!-- Your stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
@@ -18,21 +25,37 @@
 
   <!-- Navigation -->
   <nav>
-    <img class="chat-logo" src="chat.png" alt="Chat Logo" />
+    <img class="chat-logo" src="chatlogo.png" alt="Chat Logo" />
+    <button id="logoutBtn">Logout</button>
   </nav>
-
+  <main>
+<div class = "main-layout">
+  <div class="user-container container" id="userList">
+    <p><em>Waiting for users to join...</em></p>
+<!--logged user seen here--> 
+  </div>
   <!-- Message container -->
-  <div class="chat-container container">
+  <div class="chat-container container" id="messageContainer">
     <!-- Messages will be appended here by JavaScript -->
   </div>
-
+  
+</div>
+<div id="forgotPasswordModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Forgot Password?</h2>
+    <input type="email" id="forgotEmail" placeholder="Enter your email address" required>
+    <button id="sendResetLink">Send Reset Link</button>
+  </div>
+</div>
   <!-- Message input field and send button -->
   <div class="send">
     <form id="send-container">
       <input type="text" id="messageInp" placeholder="Type a message..." autocomplete="off" required />
-      <button id="startBtn">Start Chat</button>
+      <button id="startBtn">Send</button>
     </form> 
   </div>
 
+</main>
 </body>
 </html>
