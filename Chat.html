@@ -21,13 +21,17 @@
   <!-- Your stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+
+<body class="chat-page">
 
   <!-- Navigation -->
   <nav>
     <img class="chat-logo" src="chatlogo.png" alt="Chat Logo" />
     <button id="logoutBtn">Logout</button>
-  </nav>
+ </nav>
+ <div class="remember-forget">
+  <a href="#">Forgot Password?</a>
+</div>
   <main>
 <div class = "main-layout">
   <div class="user-container container" id="userList">
@@ -38,7 +42,8 @@
   <div class="chat-container container" id="messageContainer">
     <!-- Messages will be appended here by JavaScript -->
   </div>
-  
+  <button id="themeToggleBtn">Switch Theme</button>
+
 </div>
 <div id="forgotPasswordModal" class="modal">
   <div class="modal-content">
@@ -48,6 +53,7 @@
     <button id="sendResetLink">Send Reset Link</button>
   </div>
 </div>
+
   <!-- Message input field and send button -->
   <div class="send">
     <form id="send-container">
@@ -55,7 +61,6 @@
       <button id="startBtn">Send</button>
     </form> 
   </div>
-
 </main>
 </body>
 </html>

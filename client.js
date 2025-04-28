@@ -2,6 +2,8 @@ const socket = io('http://localhost:8000');
 
 // Declare abc once at the top of your file
 let loggedInUser= localStorage.getItem("currentUser");
+let userData = JSON.parse(localStorage.getItem(`user_${loggedInUser}`));
+let userEmail = userData?.email; // Safely get email if available
 let hasJoined = false;
 
 
@@ -67,6 +69,9 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     const message = messageInput.value.trim();
     if (message === "") return;
+    const audio = new Audio("ding-36029.mp3");
+    audio.play();
+
     append(`You: ${message}`, 'right');
     socket.emit('send', message);
     messageInput.value = ''; // Clear the input field
@@ -137,4 +142,28 @@ sendResetLinkBtn.addEventListener('click', () => {
     } else {
         alert('Please enter a valid email address.');
     }
+});
+
+const themeToggleBtn = document.getElementById('themeToggleBtn');
+
+themeToggleBtn.addEventListener('click', () => {
+  // Toggle the "dark-mode" class on the body element
+  document.body.classList.toggle('dark-mode');
+
+  // Save the current theme to localStorage so the theme persists
+  if (document.body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+});
+
+// On page load, check if the user has a preferred theme in localStorage
+window.addEventListener('load', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
 });
